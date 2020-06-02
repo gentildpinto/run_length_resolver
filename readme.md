@@ -6,3 +6,13 @@ Exercício proposto por [Acidiney Dias](https://github.com/acidiney)
 * Sobre o exercício: https://en.wikipedia.org/wiki/Run-length_encoding
 
 Resolvido por: [Gentil Pinto](https://github.com/GentilPinto)
+
+![](rle.png)
+
+## Como testar
+
+```
+git clone https://github.com/GentilPinto/run_length_resolver.git
+cd run_length_resolver
+ruby src/main.rb
+```

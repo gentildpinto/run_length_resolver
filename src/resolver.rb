@@ -3,7 +3,11 @@ def encode(text)
     encriptedText = ''
     for i in (0..(text.size))
         if text[i] != text[i + 1]
-            encriptedText += "#{cont}#{text[i]}"
+            if cont.eql?(1)
+                encriptedText += "#{text[i]}"
+            else
+                encriptedText += "#{cont}#{text[i]}"
+            end
             cont = 1
         else
             cont += 1
@@ -20,7 +24,11 @@ def decode(encriptedText)
         if !upperChars.include?(encriptedText[i])
             someVar += "#{encriptedText[i]}"
         else
-            decriptedText += "#{encriptedText[i]}" * someVar.to_i
+            if (someVar.to_i).eql?(0) 
+                decriptedText += "#{encriptedText[i]}"
+            else
+                decriptedText += "#{encriptedText[i]}" * someVar.to_i
+            end
             someVar = ''
         end
     end
